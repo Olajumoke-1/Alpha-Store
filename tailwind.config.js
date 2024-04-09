@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import { gray } from "@material-tailwind/html/theme/base/colors";
 import withMT from "@material-tailwind/html/utils/withMT";
 
 export default withMT({
@@ -22,6 +23,8 @@ export default withMT({
         offercolor1: '#FFF5E1',
         offercolor2: '#D2EFE1',
         buttoncolor: '#FFD480',
+        black: '#1A1A1A',
+        Ash: '#F2F2F2'
         
       }
     },
