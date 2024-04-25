@@ -9,6 +9,7 @@ import AboutUs from './AboutUs'
 import PreFooter from './PreFooter'
 import Footer from './Footer'
 
+
 const Home = () => {
   return (
     <div className="font-quicksand font-medium">
@@ -21,6 +22,7 @@ const Home = () => {
       <AboutUs/>
       <PreFooter/>
       <Footer/>
+    
     </div>
   )
 }

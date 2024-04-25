@@ -11,10 +11,10 @@ const SignIn = () =>{
     }
   
   return (
-    <>
+    
       <div>
         <NavBar />
-        </div>
+        
 
 {/* SignIn section  */}
 
@@ -133,11 +133,11 @@ const SignIn = () =>{
 
 {/* Don't have Account- section */}
           <div className="relative">
-            <div className="absolute inset-0 flex items-center" aria-hidden="true">
+            <div className="absolute flex items-center">
               <div className="w-full border-t border-gray-200" />
             </div>
             <div className="relative flex justify-center">
-              <span className= " text-Grey font-normal leading-[21px] text-[14px]">Don't have account? </span> <span className="font-bold text-black leading-[21px] text-[14px] cursor-pointer">Sign Up</span>
+              <span className= " text-gray font-normal leading-[21px] text-[14px]">Don't have account? </span> <span className="font-bold text-black leading-[21px] text-[14px] cursor-pointer ml-2">Sign Up</span>
             </div>
 {/* Don't have Account- section */}
 
@@ -150,7 +150,7 @@ const SignIn = () =>{
   <>
   <Footer />
   </>
-</>
+</div>
  )
  }
 
