@@ -1,5 +1,6 @@
 import React from 'react';
 import VectorImage from '../images/Vector.png';
+import ClientImage from '../images/Prince Akachi.jpg'
 import { Link } from 'react-router-dom';
 
 
@@ -16,12 +17,23 @@ const NavBar = () => {
         {/* SEARCH BAR SECTION */}
 
         <div className=" w-100 h-9 flex items-center border-none rounded-sm bg-gray-100 text-fontgreen">
-      <select className="mr-2  bg-gray-100 border-none outline-none">
-        <option>All Categories</option>
-        <option>Pharmacy</option>
-
-        {/* Add more options as needed */}
-      </select>
+        <select className="mr-2 bg-gray-100 border-none outline-none">
+      <option className="bg-basegreen">
+        <Link to="/" className="block w-full h-full">All Categories</Link>
+      </option>
+      <option className="bg-basegreen">
+        <Link to="./alphahealth" className="block w-full h-full">Alpha Health Bot</Link>
+      </option>
+      <option className="bg-basegreen">
+        <Link to="/pharmacy" className="block w-full h-full">Pharmacy</Link>
+      </option>
+      <option className="bg-basegreen">
+        <Link to="/" className="block w-full h-full">Explore Categories</Link>
+      </option>
+      <option className="bg-basegreen">
+        <Link to="/" className="block w-full h-full">Popular Categories</Link>
+      </option>
+    </select>
       <input
         type="text"
         placeholder="Search for items..."
@@ -54,9 +66,9 @@ const NavBar = () => {
         </svg>
         <div className="flex flex-col">
         <span className="text-sm ml-1 font-small">My Cart</span>
-        <span className="text-sm pt-0.1 pl-1 text-basegreen">$21</span>
+        <span className="text-sm pt-0.1 pl-1 text-basegreen">#1500</span>
         </div>
-        <div className="absolute left-10 top-0 mt-3 ml-10 pl-2">
+        <div className="absolute left-16 top-0 mt-3 ml-10 pl-2">
         <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M4.46967 6.21967C4.76256 5.92678 5.23744 5.92678 5.53033 6.21967L9.5 10.1893L13.4697 6.21967C13.7626 5.92678 14.2374 5.92678 14.5303 6.21967C14.8232 6.51256 14.8232 6.98744 14.5303 7.28033L10.0303 11.7803C9.73744 12.0732 9.26256 12.0732 8.96967 11.7803L4.46967 7.28033C4.17678 6.98744 4.17678 6.51256 4.46967 6.21967Z" fill="#253D4E"/>
         </svg>
@@ -66,10 +78,10 @@ const NavBar = () => {
     </div>
 
     {/* CLIENT BOARD */}
-    <div className="ml-20 pl-6 flex items-center">
-     <img class="inline-block h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""></img>
+    <div className="ml-20 pl-4 flex items-center">
+    <img src={ClientImage} alt="Client Image" className="w-11 h-11 rounded-full" />
      <div className="flex">
-     <span className="text-md ml-1 font-small">Ramzi David</span>
+     <span className="text-md ml-1 font-small">Prince Akachi</span>
      <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M4.46967 6.21967C4.76256 5.92678 5.23744 5.92678 5.53033 6.21967L9.5 10.1893L13.4697 6.21967C13.7626 5.92678 14.2374 5.92678 14.5303 6.21967C14.8232 6.51256 14.8232 6.98744 14.5303 7.28033L10.0303 11.7803C9.73744 12.0732 9.26256 12.0732 8.96967 11.7803L4.46967 7.28033C4.17678 6.98744 4.17678 6.51256 4.46967 6.21967Z" fill="#253D4E"/>
         </svg>

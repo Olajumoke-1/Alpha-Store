@@ -1,51 +1,52 @@
 import React from 'react'
 import NavBar from './NavBar'
-import PharmNav from './PharmNav'
 import pharmImage from '../images/pharm.jpg'
-import AcetoTab from '../images/AcetoTab.png.jpg'
+import Body from '../images/Body.jpg'
 import cart from '../images/shopping-cart.png'
-import ProbKids from '../images/ProbKids.jpg'
-import AzoTab from '../images/AzoTab.png.jpg'
-import CoughSyrp from '../images/CoughSyrup.jpg'
-import DaburTul from '../images/DaburTul.jpg'
-import NatureMade from '../images/NatureMade.jpg'
-import NutriBio from '../images/NutriBio.jpg'
-import OrgCholrella from '../images/OrgChlorella.jpg'
-import Paracet from '../images/Paracet.jpg'
-import ProbWomen from '../images/ProbWomen.jpg'
-import Acycor from '../images/Acycor.png.jpg'
-import Amatem from '../images/Amatem.png.jpg'
-import AntiDiabetic from '../images/AntiDiabetic.png.jpg'
-import FertilAid from '../images/FertileAid.jpg'
-import Pregnacare from '../images/Pregnacare.jpg'
+import BodyOils from '../images/BodyOils.jpg'
+import Brushes from '../images/Brushes.jpg'
+import Coconut from '../images/Coconut.jpg'
+import Colors from '../images/Colors.jpg'
+import Facials from '../images/Facials.jpg'
+import Kits from '../images/Kits.jpg'
+import Makeup from '../images/Makeup.jpg'
+import MenSkin from '../images/MenSkin.jpg'
+import Oils from '../images/NatureOil.jpg'
+import Olay from '../images/Olay.jpg'
+import Perfs from '../images/Perfs.jpg'
+import Perfss from '../images/Perfss.jpg'
+import Serums from '../images/Serum.jpg'
+import Sunscreen from '../images/Sunscreen.jpg'
 import Footer from './Footer'
+import PharmNav from './PharmNav'
 
 
-const Pharmacy = () => {
+const Beauty = () => {
   return (
     <div>
       < NavBar/>
       <div>
       <img src={pharmImage} alt="pharm picture" className="w-[2040px] h-[123px]" />
-    </div>
-  
-       <div className="mt-[40px]">
-        <PharmNav />
       </div>
+      <PharmNav/>
+  
+       <div className="flex space-x-2 mt-[50px] justify-center text-basegreen text-[37px] leading-6 font-bold mr-[27px]">
+        <p>Beauty & Skincare</p>
+       </div>
       {/* First Row */}
 
     <div className="mx-auto w-[100%] px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 gap-y-0">
-      <div className="grid grid-cols-1 gap-x-0 gap-y-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 xl:gap-x-0 mb-[80px] mt-[-20px]">
-          <div className="bg-white p-4">
-      <img src={AcetoTab} alt="AcetoTab picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh" />
-        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Acetaminophen 500mg</p>
+      <div className="grid grid-cols-1 gap-x-0 gap-y-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 xl:gap-x-0">
+          <div className="bg-white p-4 ">
+      <img src={Body} alt="BodySet picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh" />
+        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Body Cream Set</p>
         <div className="inline-flex items-center"> 
     <p className="text-gray text-[14px] font-medium line-through inline leading-[21px] w-[37px] h-[20px]">₦100</p>
-    <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦300</span>
+    <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦500</span>
 
    {/* Add cart section */}
     <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
-        <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
+        <img src={cart} alt="cart Image" className=" bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
     </div>
@@ -53,8 +54,8 @@ const Pharmacy = () => {
   {/* Add cart section */}
    
    <div className=" bg-white p-4 inline-block">
-   <img src={ProbKids} alt="ProbKids picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh" />
-        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Chewable Probiotic (kids)</p>
+   <img src={BodyOils} alt="BodyOilspicture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh" />
+        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Body Oils</p>
   
         <div className="inline-flex items-center"> {/* Use inline-flex for layout and align items center */}
     <p className="text-gray text-[14px] font-medium line-through inline leading-[21px] w-[37px] h-[20px]">₦200</p>
@@ -69,8 +70,8 @@ const Pharmacy = () => {
       </div>
 
    <div className=" bg-white p-4 inline-block">
-   <img src={OrgCholrella} alt="OrgCholrella picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh" />
-        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Organic Chlorella</p>
+   <img src={Serums} alt="Serums picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh" />
+        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Facial Serums</p>
   
         <div className="inline-flex items-center"> {/* Use inline-flex for layout and align items center */}
     <p className="text-gray text-[14px] font-medium line-through inline leading-[21px] w-[37px] h-[20px]">₦700</p>
@@ -85,8 +86,8 @@ const Pharmacy = () => {
       </div>
 
    <div className=" bg-white p-4 inline-block">
-       <img src={CoughSyrp} alt="CoughSyrp picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh" />
-        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Herbion Cough Syrup</p>
+       <img src={Sunscreen} alt="Sunscreen picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh" />
+        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Face Sunscreen</p>
   
         <div className="inline-flex items-center"> 
     <p className="text-gray text-[14px] font-medium line-through inline leading-[21px] w-[37px] h-[20px]">₦200</p>
@@ -101,8 +102,8 @@ const Pharmacy = () => {
       </div>
 
    <div className=" bg-white p-4 inline-block">
-      <img src={ProbWomen} alt="ProbWomen picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh" />
-        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Probiotics (Women)</p>
+      <img src={Olay} alt="Olay picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh" />
+        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Olay Products(set)</p>
         <div className="inline-flex items-center"> 
     <p className="text-gray text-[14px] font-medium line-through inline leading-[21px] w-[37px] h-[20px]">₦300</p>
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦5500</span>
@@ -121,17 +122,17 @@ const Pharmacy = () => {
 
       {/* Second Row */}
 
-<div className="mx-auto w-[100%] px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 gap-y-0 mt-[-210px]">
+<div className="mx-auto w-[100%] px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 gap-y-0 mt-[-134px]">
       <div className="grid grid-cols-1 gap-x-0 gap-y-0 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 xl:gap-x-0">
           <div className="bg-white p-4 ">
-      <img src={NatureMade} alt="NatureMade picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh" />
-        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Zinc tablet 30mg</p>
+      <img src={Perfs} alt="NatureMade picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh" />
+        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">OAB Perfume (Men)</p>
         <div className="inline-flex items-center"> {/* Use inline-flex for layout and align items center */}
     <p className="text-gray text-[14px] font-medium line-through inline leading-[21px] w-[37px] h-[20px]">₦200</p>
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦1000</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -140,8 +141,8 @@ const Pharmacy = () => {
   {/* Add cart section */}
    
    <div className=" bg-white p-4 inline-block">
-   <img src={Paracet} alt="Paracetamol picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh" />
-        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Paracetamol capsule </p>
+   <img src={Perfss} alt="Perfss picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh" />
+        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">QAR Perfume (Women) </p>
   
         <div className="inline-flex items-center"> {/* Use inline-flex for layout and align items center */}
     <p className="text-gray text-[14px] font-medium line-through inline leading-[21px] w-[37px] h-[20px]">₦100</p>
@@ -156,8 +157,8 @@ const Pharmacy = () => {
       </div>
 
    <div className=" bg-white p-4 inline-block">
-   <img src={AzoTab} alt="AzoTab picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh" />
-        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">AZO Urinary pain relief</p>
+   <img src={Kits} alt="Kits picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh" />
+        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Make-up Kit(set)</p>
   
         <div className="inline-flex items-center"> 
     <p className="text-gray text-[14px] font-medium line-through inline leading-[21px] w-[37px] h-[20px]">₦700</p>
@@ -172,8 +173,8 @@ const Pharmacy = () => {
       </div>
 
    <div className=" bg-white p-4 inline-block">
-       <img src={NutriBio} alt="NutriBio picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh" />
-        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">GrapeFruit Seed extract 125mg</p>
+       <img src={MenSkin} alt="MenSkin picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh" />
+        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">MenSkin Care (set)</p>
   
         <div className="inline-flex items-center"> 
     <p className="text-gray text-[14px] font-medium line-through inline leading-[21px] w-[37px] h-[20px]">₦300</p>
@@ -181,15 +182,15 @@ const Pharmacy = () => {
 
    {/* Add cart section */}
     <div className="bg-carrotgreen ml-5 mt-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
-        <img src={cart} alt="cart Image" className="bg-basegreen w-[15px] h-[15px] m-2"/> 
+        <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
     </div>
       </div>
 
    <div className=" bg-white p-4 inline-block">
-      <img src={DaburTul} alt="DaburTul picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh" />
-        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Tulsi Respiratory health</p>
+      <img src={Facials} alt="Facials picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh" />
+        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Facials Wash</p>
         <div className="inline-flex items-center"> 
     <p className="text-gray text-[14px] font-medium line-through inline leading-[21px] w-[37px] h-[20px]">₦270</p>
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦900</span>
@@ -208,11 +209,11 @@ const Pharmacy = () => {
 
                     {/* Third row */}
 
-    <div className="mx-auto w-[100%] px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 gap-y-0 mt-[-148px]">
+    <div className="mx-auto w-[100%] px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 gap-y-0 mt-[-134px]">
       <div className="grid grid-cols-1 gap-x-0 gap-y-0 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 xl:gap-x-0">
           <div className="bg-white p-4 ">
-      <img src={Amatem} alt="Amatem picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh p-4" />
-        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Amatem Forte</p>
+      <img src={Makeup} alt="Makeup picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh p-4" />
+        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Mini- Makeups</p>
         <div className="inline-flex items-center"> {/* Use inline-flex for layout and align items center */}
     <p className="text-gray text-[14px] font-medium line-through inline leading-[21px] w-[37px] h-[20px]">₦100</p>
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦930</span>
@@ -227,8 +228,8 @@ const Pharmacy = () => {
   {/* Add cart section */}
    
    <div className=" bg-white p-4 inline-block">
-   <img src={Acycor} alt="Acycor picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh p-4" />
-        <p className="mb-[13px] font-[600] text-[19px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Acycor Plus Tab</p>
+   <img src={Brushes} alt="Brushes picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh p-4" />
+        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Makeup Brushes (set)</p>
   
         <div className="inline-flex items-center"> {/* Use inline-flex for layout and align items center */}
     <p className="text-gray text-[14px] font-medium line-through inline leading-[21px] w-[37px] h-[20px]">₦200</p>
@@ -243,12 +244,12 @@ const Pharmacy = () => {
       </div>
 
    <div className=" bg-white p-4 inline-block">
-   <img src={AntiDiabetic} alt="Antidiabetic picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh" />
-        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Antidiabetic Tea</p>
+   <img src={Colors} alt="Colors picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh" />
+        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Eyeshadows</p>
   
         <div className="inline-flex items-center"> {/* Use inline-flex for layout and align items center */}
     <p className="text-gray text-[14px] font-medium line-through inline leading-[21px] w-[37px] h-[20px]">₦900</p>
-    <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦4000</span>
+    <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦2000</span>
 
    {/* Add cart section */}
     <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
@@ -259,8 +260,8 @@ const Pharmacy = () => {
       </div>
 
    <div className=" bg-white p-4 inline-block">
-       <img src={FertilAid} alt="FertilAid picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh p-4" />
-        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">FertilAid For Men</p>
+       <img src={Coconut} alt="Coconut picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh p-4" />
+        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Coconut oils</p>
   
         <div className="inline-flex items-center">
     <p className="text-gray text-[14px] font-medium line-through inline leading-[21px] w-[37px] h-[20px]">₦200</p>
@@ -275,8 +276,8 @@ const Pharmacy = () => {
       </div>
 
    <div className=" bg-white p-4 inline-block">
-      <img src={Pregnacare} alt="Pregnacare picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh p-6" />
-        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Pregnacare max</p>
+      <img src={Oils} alt="Oils picture" className="w-[333px] h-[187px] mb-[9px] border-[2px] border-dotAsh p-6" />
+        <p className="mb-[13px] font-[600] text-[17px] leading-[23px] text-fontgreen w-[215px] h-[27px]">Nature Essence oils</p>
         <div className="inline-flex items-center"> 
     <p className="text-gray text-[14px] font-medium line-through inline leading-[21px] w-[37px] h-[20px]">₦900</p>
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦7500</span>
@@ -290,13 +291,12 @@ const Pharmacy = () => {
     </div>
     </div>
     </div>
-
+    
     <>
   <Footer />
   </>
     </div>
-
     
   )
 }
-export default Pharmacy
+export default Beauty

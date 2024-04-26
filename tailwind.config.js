@@ -9,6 +9,14 @@ export default withMT({
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "480px",
+        mds: "600px",
+        md: "800px",
+        lgss: "976px",
+        lg: "1200px",
+        xxl: "1440px",
+      },
       colors: {
         basegreen: '#3BB77E',
         fontgreen: '#253D4E',
