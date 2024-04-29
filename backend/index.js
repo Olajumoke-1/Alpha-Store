@@ -2,7 +2,7 @@ const express = require("express");
 const db = require("./routes/db-config");
 const app = express();
 const cookie = require("cookie-parser");
-const PORT = process.env.PORT || 5003;
+const PORT = process.env.PORT || 5004;
 
 app.use("/js", express.static(__dirname + "./public/js"));
 app.use("/css", express.static(__dirname + "./public/css"));
@@ -25,6 +25,29 @@ app.get("/get_Categories", (req, res) => {
             return res.status(500).json({ error: "Internal server error" });
         }
         return res.json(data);
+    });
+});
+
+// Sign up endpoint
+app.post("/signUp", (req, res) => {
+    const { email, password } = req.body;
+    // Check if email and password are provided
+    if (!email || !password) {
+        return res.status(400).json({ error: "Email and password are required" });
+    }
+    // Implement your logic to insert user data into the database
+    const sql = "INSERT INTO users (email, password) VALUES (?, ?)";
+    db.query(sql, [email, password], (err, results) => {
+        if (err) {
+            console.error("Error executing SQL:", err);
+            return res.status(500).json({ error: "Internal server error" });
+        }
+        // Check if user was successfully inserted
+        if (results && results.affectedRows === 1) {
+            return res.json({ message: "User registered successfully" });
+        } else {
+            return res.status(500).json({ error: "Failed to register user" });
+        }
     });
 });
 
