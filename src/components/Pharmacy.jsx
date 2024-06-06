@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import NavBar from './NavBar'
 import PharmNav from './PharmNav'
 import pharmImage from '../images/pharm.jpg'
@@ -22,6 +22,18 @@ import Footer from './Footer'
 
 
 const Pharmacy = () => {
+  const [cartAlert, setCartAlert] = useState('');
+
+  const handleAddToCart = (productName) => {
+    setCartAlert(`${productName} added to cart`);
+    setTimeout(() => {
+      setCartAlert('');
+    }, 3000); // Hide the alert after 3 seconds
+  };
+
+
+
+
   return (
     <div>
       < NavBar/>
@@ -44,7 +56,7 @@ const Pharmacy = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦300</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('Acetaminophen 500mg')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -61,7 +73,7 @@ const Pharmacy = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦700</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('Chewable Probiotic (kids)')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -77,7 +89,7 @@ const Pharmacy = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦5000</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('Organic Chlorella')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -93,7 +105,7 @@ const Pharmacy = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦700</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('Herbion Cough Syrup')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -108,7 +120,7 @@ const Pharmacy = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦5500</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('Probiotics (Women)')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -131,7 +143,7 @@ const Pharmacy = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦1000</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('Zinc tablet 30mg')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -148,7 +160,7 @@ const Pharmacy = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦350</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('Paracetamol capsule ')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -164,7 +176,7 @@ const Pharmacy = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦5000</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('AZO Urinary pain relief')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -180,7 +192,7 @@ const Pharmacy = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦3000</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-5 mt-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-5 mt-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('GrapeFruit Seed extract 125mg')}>
         <img src={cart} alt="cart Image" className="bg-basegreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -195,7 +207,7 @@ const Pharmacy = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦900</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('Tulsi Respiratory health')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -218,7 +230,7 @@ const Pharmacy = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦930</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('Amatem Forte')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -235,7 +247,7 @@ const Pharmacy = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦700</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer " onClick={() => handleAddToCart('Acycor Plus Tab')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -251,7 +263,7 @@ const Pharmacy = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦4000</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('Antidiabetic Tea')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -267,7 +279,7 @@ const Pharmacy = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦7000</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('FertilAid For Men')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -282,7 +294,7 @@ const Pharmacy = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦7500</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('Pregnacare max')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -292,6 +304,14 @@ const Pharmacy = () => {
     </div>
 
     <>
+
+     {/* Cart Alert */}
+     {cartAlert && (
+        <div className="fixed bottom-0 right-0 mb-8 mr-8 bg-basegreen text-white rounded-md p-2 shadow-md z-50">
+          {cartAlert}
+        </div>
+      )}
+
   <Footer />
   </>
     </div>

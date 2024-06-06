@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import NavBar from './NavBar'
 import pharmImage from '../images/pharm.jpg'
 import Body from '../images/Body.jpg'
@@ -22,6 +22,16 @@ import PharmNav from './PharmNav'
 
 
 const Beauty = () => {
+
+    const [cartAlert, setCartAlert] = useState('');
+
+    const handleAddToCart = (productName) => {
+      setCartAlert(`${productName} added to cart`);
+      setTimeout(() => {
+        setCartAlert('');
+      }, 3000); // Hide the alert after 3 seconds
+    };
+
   return (
     <div>
       < NavBar/>
@@ -45,7 +55,7 @@ const Beauty = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦500</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('Body Cream Set')}>
         <img src={cart} alt="cart Image" className=" bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -62,7 +72,7 @@ const Beauty = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦700</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('Body Oil')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -78,7 +88,7 @@ const Beauty = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦5000</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('Facial Serums')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -94,7 +104,7 @@ const Beauty = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦700</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('Face Sunscreen')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -109,7 +119,7 @@ const Beauty = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦5500</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('Olay Products')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -132,7 +142,7 @@ const Beauty = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦1000</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('OAB Perfume (Men)')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -149,7 +159,7 @@ const Beauty = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦350</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('QAR Perfume (Women)')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -165,7 +175,7 @@ const Beauty = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦5000</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('Make-up Kit (Set)')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -181,7 +191,7 @@ const Beauty = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦3000</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-5 mt-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-5 mt-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart(' MenSkin Care (Set)')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -196,7 +206,7 @@ const Beauty = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦900</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('Facial Wash')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -219,7 +229,7 @@ const Beauty = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦930</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('Mini-Makeups')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -236,7 +246,7 @@ const Beauty = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦700</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-2 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('Makeup Brushes')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -252,7 +262,7 @@ const Beauty = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦2000</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('Eyeshadows')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -268,7 +278,7 @@ const Beauty = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦7000</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('Coconut Oils')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -283,7 +293,7 @@ const Beauty = () => {
     <span className="text-basegreen font-[600] ml-4 leading-[25px] w-[48px] h-[24px] text-[15px]">₦7500</span>
 
    {/* Add cart section */}
-    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer">
+    <div className="bg-carrotgreen ml-5 flex items-center px-[2px] py-[2px] w-[72px] h-[35px] rounded cursor-pointer" onClick={() => handleAddToCart('Nature Essence Oils')}>
         <img src={cart} alt="cart Image" className="bg-carrotgreen w-[15px] h-[15px] m-2"/> 
         <p className="text-basegreen font-medium text-[17px] leading-[21px] w-[31px] h-[20px] ml-[-6px] cursor-pointer">Add</p>
     </div>
@@ -293,6 +303,13 @@ const Beauty = () => {
     </div>
     
     <>
+
+     {/* Cart Alert */}
+     {cartAlert && (
+        <div className="fixed bottom-0 right-0 mb-8 mr-8 bg-basegreen text-white rounded-md p-2 shadow-md z-50">
+          {cartAlert}
+        </div>
+      )}
   <Footer />
   </>
     </div>

@@ -53,4 +53,3 @@ const OfferSection = () => {
 };
 
 export default OfferSection;
-

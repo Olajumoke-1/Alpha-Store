@@ -9,6 +9,9 @@ export default withMT({
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        hero: "url('/src/images/bg-fruits.svg')"
+      },
       screens: {
         xs: "480px",
         mds: "600px",
